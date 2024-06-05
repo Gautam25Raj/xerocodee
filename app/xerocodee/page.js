@@ -4,7 +4,7 @@ import SideBar from "@/components/layout/dashboard/SideBar";
 
 export default function DashboardPage() {
   return (
-    <main className="h-screen w-screen flex flex-col ">
+    <main className="w-screen flex flex-col ">
       <Navbar />
 
       <div className="flex-1 flex gap-4">
