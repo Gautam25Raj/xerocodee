@@ -2,7 +2,7 @@ import React from "react";
 
 import LogoutBtn from "@/components/ui/LogoutBtn";
 import RoleProvider from "@/providers/RoleProvider";
-import SelfHostingItem from "@/components/layout/selfHosting/selfHostingItem";
+import SelfHostingItem from "@/components/layout/selfHosting/SelfHostingItem";
 
 const SelfHostingPage = () => {
   return (
