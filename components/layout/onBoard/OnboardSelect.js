@@ -13,7 +13,7 @@ const OnboardSelect = () => {
 
   return (
     <>
-      <div className="flex justify-between">
+      <div className="flex justify-between space-x-3">
         <Developer />
         <Organisation selected={selected} setSelected={setSelected} />
         <Company selected={selected} setSelected={setSelected} />

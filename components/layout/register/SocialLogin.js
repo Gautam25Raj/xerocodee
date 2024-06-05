@@ -2,11 +2,24 @@
 
 import Image from "next/image";
 
+import { account } from "@/server/appwrite/config";
+
 const SocialLogin = () => {
+  const handleLoginWithGoogle = () => {
+    account.createOAuth2Session(
+      "google",
+      "http://localhost:3000/onboarding",
+      "http://localhost:3000/login"
+    );
+  };
+
   return (
     <div className="flex justify-between">
-      <button className="px-4 py-2 border flex gap-2 border-slate-200 rounded-lg bg-white text-slate-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-150 text-nowrap">
-        <span>Sign Up with Google</span>
+      <button
+        className="px-4 py-2 border flex gap-2 border-slate-200 rounded-lg bg-white text-slate-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-150 text-nowrap"
+        onClick={handleLoginWithGoogle}
+      >
+        <span>Login with Google</span>
         <Image
           className="w-6 h-6"
           src="https://www.svgrepo.com/show/475656/google-color.svg"

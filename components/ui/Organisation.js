@@ -19,7 +19,7 @@ const Organisation = ({ setSelected }) => {
     <Button
       variant="outlined"
       onClick={handleOrganisation}
-      className="border-[#8F8F8F] text-black hover:border-black hover:text-black px-20 py-3"
+      className="border-[#8F8F8F] text-black hover:border-black hover:text-white hover:bg-[#1F64FF] px-20 py-3"
     >
       Organisation
     </Button>

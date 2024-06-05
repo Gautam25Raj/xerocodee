@@ -8,15 +8,22 @@ import { useRouter } from "next/navigation";
 
 import { account } from "@/server/appwrite/config";
 import { toast } from "sonner";
+import { useDispatch } from "react-redux";
+import { setUser } from "@/redux/slice/userSlice";
 
 const LoginForm = () => {
   const router = useRouter();
+  const dispatch = useDispatch();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const login = async (email, password) => {
     try {
       const session = await account.createEmailPasswordSession(email, password);
+
+      const user = await account.get();
+      dispatch(setUser(user));
 
       setEmail("");
       setPassword("");

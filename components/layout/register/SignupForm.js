@@ -9,9 +9,12 @@ import { toast } from "sonner";
 import { account, ID } from "@/server/appwrite/config";
 
 import { useRouter } from "next/navigation";
+import { useDispatch } from "react-redux";
+import { setUser } from "@/redux/slice/userSlice";
 
 const SignupForm = () => {
   const router = useRouter();
+  const dispatch = useDispatch();
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -24,6 +27,9 @@ const SignupForm = () => {
   const login = async (email, password) => {
     try {
       const session = await account.createEmailPasswordSession(email, password);
+
+      const user = await account.get();
+      dispatch(setUser(user));
 
       setFirstName("");
       setLastName("");
@@ -41,7 +47,12 @@ const SignupForm = () => {
 
   const register = async () => {
     try {
-      await account.create(ID.unique(), email, password, firstName, lastName);
+      await account.create(
+        ID.unique(),
+        email,
+        password,
+        `${firstName} ${lastName}`
+      );
 
       login(email, password);
     } catch (error) {
