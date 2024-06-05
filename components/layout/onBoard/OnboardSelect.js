@@ -1,10 +1,26 @@
-import React from "react";
+"use client";
+
+import { useState } from "react";
+
+import Company from "@/components/ui/Company";
+import Developer from "@/components/ui/Developer";
+import Organisation from "@/components/ui/Organisation";
+
+import OrgCompName from "./OrgCompName";
 
 const OnboardSelect = () => {
+  const [selected, setSelected] = useState("");
+
   return (
-    <div className="w-9/12">
-      <h2>Welcome</h2>
-    </div>
+    <>
+      <div className="flex justify-between">
+        <Developer />
+        <Organisation selected={selected} setSelected={setSelected} />
+        <Company selected={selected} setSelected={setSelected} />
+      </div>
+
+      {selected != "" && <OrgCompName text={selected} />}
+    </>
   );
 };
 

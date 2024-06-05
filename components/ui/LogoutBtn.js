@@ -30,7 +30,7 @@ const LogoutBtn = () => {
   return (
     <Button
       variant="outlined"
-      className="border-[#8F8F8F] text-[#8F8F8F]"
+      className="border-[#8F8F8F] text-[#8F8F8F] hover:border-black hover:text-black absolute top-10 right-10"
       onClick={logout}
     >
       Log Out
