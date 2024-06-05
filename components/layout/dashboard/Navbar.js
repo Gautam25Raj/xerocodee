@@ -13,9 +13,9 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <div className="flex justify-between w-full h-20 p-5">
+    <div className="flex justify-between w-screen h-20 p-5">
       <Image
-        src="/dashboard/logo.png"
+        src="/xerocodee/logo.png"
         width={200}
         height={120}
         alt="Logo"
@@ -27,17 +27,9 @@ export default function Navbar() {
           color="primary"
           className="normal-case text-black bg-yellow-300 rounded-full pl-2 pr-3 gap-2"
         >
-          <IconButton
-            className="rounded-full"
-            size="small"
-            style={{
-              backgroundColor: "#f5f5f5",
-              color: "black",
-              padding: "0.5rem",
-            }}
-          >
+          <div className="bg-white rounded-full p-2 flex items-center justify-center">
             <CardGiftcardOutlined style={{ fontSize: "1rem" }} />
-          </IconButton>
+          </div>
           Upgrade Plan
         </Button>
 
