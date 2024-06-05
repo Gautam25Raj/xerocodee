@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
     <div className="flex justify-between w-screen h-20 p-5">
       <Image
-        src="/xerocodee/logo.png"
+        src="/dashboard/logo.png"
         width={200}
         height={120}
         alt="Logo"
