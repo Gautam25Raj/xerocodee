@@ -26,7 +26,7 @@ export default function SideBar() {
       name: "Service Board",
       Icon: (
         <Image
-          src="/xerocodee/hello 1.svg"
+          src="/dashboard/hello 1.svg"
           width={200}
           height={120}
           alt="Logo"
@@ -40,7 +40,7 @@ export default function SideBar() {
       name: "Cluster",
       Icon: (
         <Image
-          src="/xerocodee/Vector.svg"
+          src="/dashboard/Vector.svg"
           width={200}
           height={120}
           alt="Logo"
@@ -54,7 +54,7 @@ export default function SideBar() {
       name: "Databases",
       Icon: (
         <Image
-          src="/xerocodee/Component 19.svg"
+          src="/dashboard/Component 19.svg"
           width={200}
           height={120}
           alt="Logo"
@@ -68,7 +68,7 @@ export default function SideBar() {
       name: "Environment",
       Icon: (
         <Image
-          src="/xerocodee/Hard Drive.svg"
+          src="/dashboard/Hard Drive.svg"
           width={200}
           height={120}
           alt="Logo"
@@ -82,7 +82,7 @@ export default function SideBar() {
       name: "Workflow",
       Icon: (
         <Image
-          src="/xerocodee/Vector(1).svg"
+          src="/dashboard/Vector(1).svg"
           width={200}
           height={120}
           alt="Logo"
@@ -96,7 +96,7 @@ export default function SideBar() {
       name: "Monitoring",
       Icon: (
         <Image
-          src="/xerocodee/monitoring 1.svg"
+          src="/dashboard/monitoring 1.svg"
           width={200}
           height={120}
           alt="Logo"
@@ -110,7 +110,7 @@ export default function SideBar() {
       name: "Security",
       Icon: (
         <Image
-          src="/xerocodee/security 1.svg"
+          src="/dashboard/security 1.svg"
           width={200}
           height={120}
           alt="Logo"
@@ -124,7 +124,7 @@ export default function SideBar() {
       name: "Web Hooks",
       Icon: (
         <Image
-          src="/xerocodee/Vector(2).svg"
+          src="/dashboard/Vector(2).svg"
           width={200}
           height={120}
           alt="Logo"
@@ -138,7 +138,7 @@ export default function SideBar() {
       name: "Log Errors",
       Icon: (
         <Image
-          src="/xerocodee/Menu 2.svg"
+          src="/dashboard/Menu 2.svg"
           width={200}
           height={120}
           alt="Logo"
@@ -151,7 +151,7 @@ export default function SideBar() {
   ];
 
   return (
-    <div className="h-full flex flex-col gap-2 w-[20%] pl-6 pt-6">
+    <div className="h-full flex flex-col gap-2 w-[20%] pt-6 sticky top-20">
       {sidebarItems.map((item, index) => {
         return item.disabled ? (
           <Button

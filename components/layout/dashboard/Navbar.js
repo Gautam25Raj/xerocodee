@@ -13,9 +13,9 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <div className="flex justify-between w-screen h-20 p-5">
+    <div className="flex justify-between w-screen h-20 p-5 sticky top-0">
       <Image
-        src="/xerocodee/logo.png"
+        src="/dashboard/logo.png"
         width={200}
         height={120}
         alt="Logo"

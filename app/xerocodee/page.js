@@ -7,7 +7,7 @@ export default function DashboardPage() {
     <main className="w-screen flex flex-col ">
       <Navbar />
 
-      <div className="flex-1 flex gap-4">
+      <div className="flex-1 flex gap-4 mx-8">
         <SideBar />
         <Main />
       </div>
