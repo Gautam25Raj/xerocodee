@@ -8,8 +8,8 @@ const SocialLogin = () => {
   const handleLoginWithGoogle = () => {
     account.createOAuth2Session(
       "google",
-      "http://localhost:3000/onboarding",
-      "http://localhost:3000/login"
+      "https://xerocodee-iota.vercel.app/onboarding",
+      "https://xerocodee-iota.vercel.app/login"
     );
   };
 
